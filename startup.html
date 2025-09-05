@@ -1,9 +1,11 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover, user-scalable=no">
+    
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/other.css">
     <link rel="manifest" href="/manifest.json">
+
 
     <link rel="apple-touch-icon" type="image/jpg" sizes="512x512" href="images/logoswish.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -13,37 +15,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>Index</title>
+    <title>Swish</title>
+    
 </head>
-<body style="-webkit-user-select: none;">
-    <div class="content">
-        <div class="curve"></div>
-        <div class="headContent1">
-            <a href="startup.html"><img style="height: 15px; padding-left: 20px;" src="images/close.png" alt=""></a>
-            <p style="color: white; font-weight: 500;">Swisha</p>
-            <p style="font-size: 25px; color: white; padding-right: 20px;">?</p>
+<body>
+    <div class="content" style="-webkit-user-select: none;">
+        <div class="headContent">
+            <img src="images/nordea-white.png" alt="">
         </div>
-        <div class="formContent">
-            <div class="formInside">
-                <div class="choose">
-                    <button style="background-color: #17a4df; color: white;" id="vanlig" onclick="vanlig()">Vanlig</button>
-                    <button id="foretag" onclick="foretag()">Företag</button>
+        <div class="logoContent">
+            <img src="images/Swish_Logo_Primary_Dark-BG_P3.png" alt="">
+        </div>
+        <div class="bottomContent1">
+            <div class="buttons999">
+                <a class="btn999" href="form.html">Swisha</a>
+                <a class="btn999" style="background-color: #122228; color: #17a4df;">Skanna</a>
+            </div>
+            <img class="iconsTemp" src="images/bottom.png" alt="">
+            <div class="iconContent">
+                <div class="icon">
+                    <img src="" alt="">
+                    <p>Hem</p>
                 </div>
-                <input id="receiver-Data" style="margin-top: 10%;" type="text" placeholder="Mottagare">
-                <input id="receiverF-Data" style="margin-top: 10%; display: none;" type="text" placeholder="Företag Namn">
-
-                <input onclick="numberActive()" id="number-Data" style="margin-top: 10%;" type="tel" placeholder="Telefonnummer" maxlength="16">
-                <input id="amount-Data" style="margin-top: 10%;" type="tel" placeholder="Belopp">
-
-                <input id="message-Data" style="margin-top: 10%;" type="text" placeholder="Meddelande">
-                
+                <div class="icon">
+                    <img src="" alt="">
+                    <p>Förfrågningar</p>
+                </div>
+                <div class="icon">
+                    <p>Historik</p>
+                </div>
+                <div class="icon">
+                    <p>Profil</p>
+                </div>
             </div>
         </div>
-        <a class="swisha" id="swishaB" onclick="saveData()" href="index.html">Swisha</a>
 
     </div> 
-    <script type="module" src="js/auth.js"></script>
-    <script src="js/storage.js"></script>
     <script src="js/index.js"></script>
     <script src="js/k1000.js"></script>
     <script>
@@ -51,6 +58,7 @@
             function handleScroll() {
                 if (window.innerHeight >= 677) {
                     // Disable scrolling
+                    
                     document.addEventListener('touchmove', preventDefaultScroll, { passive: false });
                 } else {
                     // Enable scrolling
@@ -60,7 +68,7 @@
             function preventDefaultScroll(event) {
                 event.preventDefault();
             }
-            handleScroll(); // Call the function initially
+            handleScroll(); 
             window.addEventListener('resize', handleScroll); // Add event listener for window resize
         });
     </script>

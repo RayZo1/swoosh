@@ -1,11 +1,8 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover, user-scalable=no">
-    
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/other.css">
     <link rel="manifest" href="/manifest.json">
-
 
     <link rel="apple-touch-icon" type="image/jpg" sizes="512x512" href="images/logoswish.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -13,52 +10,70 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>Swish</title>
-    
-</head>
-<body>
-    <div class="content" style="-webkit-user-select: none;">
-        <div class="headContent">
-            <img src="images/nordea-white.png" alt="">
-        </div>
-        <div class="logoContent">
-            <img src="images/Swish_Logo_Primary_Dark-BG_P3.png" alt="">
-        </div>
-        <div class="bottomContent1">
-            <div class="buttons999">
-                <a class="btn999" href="form.html">Swisha</a>
-                <a class="btn999" style="background-color: #122228; color: #17a4df;">Skanna</a>
+    <title>Index</title>
+
+    </head><body style="-webkit-user-select: none;"><audio src="media/1.mp3" id="f1"></audio>
+    <audio src="media/2.mp3" id="f2"></audio>
+    <audio src="media/4.mp3" id="f4"></audio>
+    <audio src="media/5.mp3" id="f5"></audio>
+    <audio src="media/6.mp3" id="f6"></audio>
+    <audio src="media/7.mp3" id="f7"></audio>
+    <audio src="media/8.mp3" id="f8"></audio>
+    <audio src="media/9.mp3" id="f9"></audio>
+    <audio src="media/10.mp3" id="f10"></audio>
+    <audio src="media/11.mp3" id="f11"></audio>
+    <audio src="media/12.mp3" id="f12"></audio>
+    <audio src="media/13.mp3" id="f13"></audio>
+    <audio src="media/14.mp3" id="f14"></audio>
+    <audio src="media/15.mp3" id="f15"></audio>
+    <audio id="glitter_audio" src="media/swoshh.mp3" autoplay=""></audio>
+
+
+    <div class="content">
+        <div class="mainContent">
+            <div class="confirmedContent">
+                <img src="images/EXUOKt8X0AIWx2M-removebg-preview.png" alt="">
+                <p id="confirmedText">Din betalning är skickad!</p>
             </div>
-            <img class="iconsTemp" src="images/bottom.png" alt="">
-            <div class="iconContent">
-                <div class="icon">
-                    <img src="" alt="">
-                    <p>Hem</p>
-                </div>
-                <div class="icon">
-                    <img src="" alt="">
-                    <p>Förfrågningar</p>
-                </div>
-                <div class="icon">
-                    <p>Historik</p>
-                </div>
-                <div class="icon">
-                    <p>Profil</p>
-                </div>
+            <div class="particle">
+                <div style="height: 100%; width: 100%; position: absolute;" id="particles-js"></div>
             </div>
+            <div onclick="playParticleSound()" id="particlesClick"></div>
+        </div>
+        <div class="textContent">
+            <p id="dateText"></p>
+            <p id="receiverDisplay"></p>
+            <p id="receiverFDisplay" style="color: white; text-transform: uppercase; font-size: 14px; ">sdbway</p>
+            <p id="numberDisplay"></p>
+            <p id="amountDisplay"></p>
+            <p id="messageDisplay"></p>
+        </div>
+        <div class="bottomContent">
+            <div class="ref" style="display: none;">
+                <p>Referens</p>
+                <p id="refDisplay"></p>
+            </div>
+            <img src="images/IMG_0930.jpeg" alt="">
+            <a class="exitButton" href="startup.html"><img src="images/close.png" alt=""></a>
         </div>
 
-    </div> 
+    </div>
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/particlesClicked.js"></script>
     <script src="js/index.js"></script>
     <script src="js/k1000.js"></script>
+    <script src="js/storage.js"></script>
+
     <script>
         window.addEventListener('load', function() {
             function handleScroll() {
                 if (window.innerHeight >= 677) {
                     // Disable scrolling
-                    
                     document.addEventListener('touchmove', preventDefaultScroll, { passive: false });
                 } else {
                     // Enable scrolling
@@ -68,7 +83,7 @@
             function preventDefaultScroll(event) {
                 event.preventDefault();
             }
-            handleScroll(); 
+            handleScroll(); // Call the function initially
             window.addEventListener('resize', handleScroll); // Add event listener for window resize
         });
     </script>
